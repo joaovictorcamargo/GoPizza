@@ -51,7 +51,7 @@ function AuthProvider({ children }: AuthProviderProps) {
          .collection('user')
          .doc(account.user.uid)
          .get()
-         .then(async profile =>
+         .then(async (profile) =>
             {
                 const {name, isAdmin} = profile.data() as User;
 
